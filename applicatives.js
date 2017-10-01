@@ -9,6 +9,6 @@ const Box = x =>
 
 const add = x => y => x + y;
 
-const res1 = Box(add).ap(Box(2)).ap(Box(4).ap(Box(14)));
+const res1 = Box(add).ap(Box(2)).ap(Box(add).ap(Box(14)).ap(Box(4)));
 
 console.log("result 1: ", res1.inspect());
